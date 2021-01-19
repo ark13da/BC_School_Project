@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st js task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="firstHead" onclick="changeColor()">Hello world!</h1>
+    <h2 id="answer"></h2>
+    <!--internal script-->
+    <script>
+        function changeColor () {
+            return document.getElementById('firstHead').style.color = 'red';
+        };
+                
+        
+    </script>
+<!-- external script-->
+<script src="script.js"></script>
+</body>
+</html>
