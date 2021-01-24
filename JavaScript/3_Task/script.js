@@ -1,6 +1,7 @@
 
 
 //Finnish number generator
+//i have alot of repeating Math.floor(n / 10) * 10 would have been better if i made a variable out of it to be more readable
 
 let randNum = 0;
 let finnTranslation = '';
