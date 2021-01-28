@@ -1,0 +1,13 @@
+body{
+    background-color: thistle;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#oab{
+    margin: 10%;
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+}
