@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(20, 94, 94);
+    font-family: 'Roboto', sans-serif; 
+    
+   
+}
+
+#signup{
+    color: azure;
+    width: 380px;
+    margin: auto;
+    text-align: center;
+    
+
+}
+
+#signForm{
+    background-color: azure;
+    color: rgb(39, 37, 37);
+    margin: 5%;
+    text-align: left;
+    padding: 2%;
+    border-radius: 1%;
+}
+
+#headCenter{
+    text-align: center;
+    
+}
+
+label{
+    display: block;
+    margin: 1%;
+    font-size: small;
+}
+
+input{
+    display: block;
+    margin: 1% 1% 5% 1%;
+    font-size: small;
+    width: 100%;
+    line-height: 30px;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 1%   ;
+    padding:2%;
+
+   
+}
+
+form{
+    margin: 5% 2% 5% 2%;
+}
+
+#pSmall{
+    font-size: small;
+}
+
+#signBut{
+    background-color: rgb(226, 148, 4);
+    color: azure;
+    line-height: 30px;
+    border: 1px dotted orange;
+    border-radius: 2%;
+    
+}
+
+#signBut:hover{
+    background-color:orange;
+    border: 1px dotted orange;
+}
+
+#signBut:active{
+    background-color:rgb(182, 120, 5);
+    border: 1px dotted orange;
+}
+
+a{
+    color: rgb(226, 148, 4);
+}
+
+a:hover{
+    color: orangered;
+}
