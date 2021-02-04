@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation by js - background gradient 02022021</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="middle">
+        <div class="sect">
+            <h1>Generate custom gradient background</h3>
+            </div>
+            <form id="form">
+            <div class="sect">
+                <h3>Choose direction</h3>
+                <label for="ltr">Left to Right</label>
+                <input type="radio" name="direction" id="ltr" value="to right" >
+                <label for="rtl">Right to Left</label>
+                <input type="radio" name="direction" id="rtl" value="to left">
+                <label for="ttb">Top to Bottom</label>
+                <input type="radio" name="direction" id="ttb" value="to bottom">
+                <label for="btt">Bottom to Top</label>
+                <input type="radio" name="direction" id="btt" value="to top">
+        </div>
+        <div class="sect">
+            <h3>Choose color</h3>
+            <input type="color" name="Start" id="start" >
+            <input type="color" name="End" id="end" >
+        </div>
+        <div class="sect">
+            <h3>Genreate the background color</h3>
+            <input type="submit" value="Generate"/>
+        </form>
+        </div>
+        <div class="sect">
+            <h3>The CSS code</h3>
+            <p id="ccode"></p>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

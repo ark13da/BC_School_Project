@@ -4,19 +4,28 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: azure;
     font-family: 'Roboto', sans-serif; 
+    
   
 }
 
 .band{
-    background-color: rgb(86, 83, 107);
-    padding: 1%;
+    background-color: rgba(86, 83, 107,1);
+    padding: 2%;
     color:whitesmoke;
     display: flex;
+    width: 100%;
+    z-index:1;
 
 }
+
+
 
 ul{
     list-style: none;
@@ -81,6 +90,7 @@ main{
 }
 
 .stick{
-    position: sticky;
-/*this failed to work first time why?*/
+    position: fixed;
+    top:0;
+    
 }
