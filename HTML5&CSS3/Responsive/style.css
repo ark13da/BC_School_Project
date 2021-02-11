@@ -1,0 +1,76 @@
+
+    body{
+        background-color: bisque;
+    }
+
+
+/*
+@media (max-width:1200px){
+    body{
+        background-color: yellow;
+    }
+}
+
+@media (max-width:768px){
+    body{
+        background-color: green;
+    }
+}    
+
+@media (max-width:480px){
+    body{
+        background-color: blue;
+    }
+}
+*/
+
+header{
+    display:flex;
+    background-color: lightgrey;
+    padding: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav{
+    background-color: lightpink;
+    flex:2;
+}
+
+.logo{
+    background-color: lightseagreen;
+    flex:1;
+}
+
+li{
+    display: inline-block;
+    padding:1rem;
+}
+
+.box{
+    background-color: mediumaquamarine;
+
+    min-height:50px;
+    width: 100px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#hero{
+    width: 100px;
+    height: 100px;
+    background-color: midnightblue;
+    box-shadow: 0 0 10px black;
+}
+
+#banner{
+    align-items: center;
+    justify-content: center;
+    height:50vh;
+    background-color: mistyrose;
+}    

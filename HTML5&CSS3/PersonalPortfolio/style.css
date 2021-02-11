@@ -16,19 +16,23 @@ body{
 }
 
 .band{
-    background-color: rgba(86, 83, 107,1);
+    background-color: rgb(158, 114, 56);
     padding: 2%;
     color:whitesmoke;
     display: flex;
     width: 100%;
     z-index:1;
+    justify-content: space-between;
 
 }
 
-
+#logo{
+    
+}
 
 ul{
     list-style: none;
+    
 }
 
 ul#menu li {
@@ -49,10 +53,11 @@ ul li a:hover{
     }
 
 header{
-        background-image: url("https://source.unsplash.com/4XbZCfU2Uoo/1600x900");
+        background-image: url("https://source.unsplash.com/bnoemmyyDzM/1600x900");
         background-repeat: no-repeat;
         background-size:cover;
-        height: 500px;
+        height: 70vh;
+        
         
         
 }
@@ -61,36 +66,50 @@ header{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 70%;
+      height: 60vh;
+      padding:2%;
+      color:rgb(49, 43, 31);
 }        
 
 main{
-    margin: 5% 10% 5% 10%;    
+        
 }
 
 .timeline{
     padding:2%;
-    overflow: hidden;
+  
 }
 
-
-
-@media screen and (min-width: 400px) {
   .thumb{
-    float: right;
-    height: 100px;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .thumb{
+    
 }
 }
 
-@media screen and (min-width: 800px) {
-  .thumb{
-    float: right;
-    height: 200px;
-}
-}
 
 .stick{
     position: fixed;
     top:0;
+}
+
+.cardArea{
+    margin:1%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 25em;
+    box-shadow: 0 0 1em rgb(94, 60, 21);
+    margin:5% 1% 5% 1%;
+}
+
+.card p{
+    padding:2%;
     
 }
