@@ -20,11 +20,27 @@ function scrollFunction() {
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("nav").classList.add("band-scroll");
         document.getElementById("btop").style.display = "block";
+        document.getElementById("menuSmall").style.display = "none";
+        menuSmall = false;
         
     } else {
         document.getElementById("nav").classList.remove("band-scroll");
         document.getElementById("btop").style.display = "none";
+        document.getElementById("menuSmall").style.display = "none";
+        menuSmall = false;
         
     }
 }
+
+let menuSmall = false;
+
+document.getElementById("bars").addEventListener("click", () => { 
+    if (!menuSmall) {
+        document.getElementById("menuSmall").style.display = "inherit";
+        menuSmall = true;
+    } else { 
+        document.getElementById("menuSmall").style.display = "none";
+        menuSmall = false;
+    }
+})
 

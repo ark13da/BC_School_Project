@@ -18,18 +18,38 @@ body{
 
 .band{
     background-color: #FFC582;
-    padding: 2%;
+    padding: 1%;
     color:#8D520C;
-    display: flex;
     width: 100%;
     z-index:1;
+}
+
+#flexBand{
+    display: flex;
     justify-content: space-between;
-
 }
 
-@media screen and (max-width: 576px) {
- 
+
+.stick{
+    position: fixed;
+    top:0;
 }
+
+.band-scroll{
+    background-color: #ffc582c5;
+}
+
+#bars{
+   color:#8D520C; 
+   display: none;
+}
+
+#bars:hover{
+   color: #F9935A;
+   cursor:pointer;
+}
+
+
 
 ul{
     list-style: none;
@@ -52,6 +72,28 @@ ul li a {
 ul li a:hover{
         color: #F9935A;
     }
+
+#menuSmall{
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    #bars{
+    display:inherit;
+    }
+    #menu{
+        display: none;
+    }
+
+    ul li{
+        display: block;
+    }
+
+    #menuSmall{
+        
+        margin-top: 1rem;
+    }
+}
 
 header{
         background-image: url("https://source.unsplash.com/ieob3YsJn8s/1600x900");
@@ -100,10 +142,6 @@ header{
 
 
 
-.stick{
-    position: fixed;
-    top:0;
-}
 
 .cardArea{
     padding:0;
@@ -166,7 +204,7 @@ h2{
 }
 
 #btop{
-    background-color: #F9935A;
+    background-color: #f9945ad5;
     color: #4B4844;
     border: none;
     border-radius: 5px;
