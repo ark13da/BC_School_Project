@@ -9,16 +9,17 @@ html{
 }
 
 body{
-    background-color: azure;
+    background-color: #FEFAEF;
     font-family: 'Roboto', sans-serif; 
-    
+    color:#4B4844;
+    line-height: 1.2rem;
   
 }
 
 .band{
-    background-color: rgb(158, 114, 56);
+    background-color: #FFC582;
     padding: 2%;
-    color:whitesmoke;
+    color:#8D520C;
     display: flex;
     width: 100%;
     z-index:1;
@@ -26,8 +27,8 @@ body{
 
 }
 
-#logo{
-    
+@media screen and (max-width: 576px) {
+ 
 }
 
 ul{
@@ -35,48 +36,60 @@ ul{
     
 }
 
-ul#menu li {
+ul li {
     display: inline;
-    color:whitesmoke;
+    color:#8D520C;
     padding: 5px;
 }
 
 ul li a {
 
-    color:whitesmoke;
+    color:#8D520C;
     text-decoration: none;
     
 }
 
 ul li a:hover{
-        color: turquoise;
+        color: #F9935A;
     }
 
 header{
-        background-image: url("https://source.unsplash.com/bnoemmyyDzM/1600x900");
+        background-image: url("https://source.unsplash.com/ieob3YsJn8s/1600x900");
         background-repeat: no-repeat;
         background-size:cover;
-        height: 70vh;
-        
-        
+        height: 70vh;   
+        position: relative;
         
 }
+
+
 
 .hvcenter {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 60vh;
       padding:2%;
-      color:rgb(49, 43, 31);
-}        
+      color:#4B4844;
+      height: 100%;
+      width:100%;
+      position: relative;
+      content: "";
+      
+}  
 
-main{
-        
+.hvcenter::before{
+ content: "";
+  background-color: rgba(206, 35, 12, 0.185);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+    
+
 }
 
+
 .timeline{
-    padding:2%;
+    padding:4%;
   
 }
 
@@ -84,11 +97,7 @@ main{
     width: 100%;
 }
 
-@media screen and (max-width: 480px) {
-  .thumb{
-    
-}
-}
+
 
 
 .stick{
@@ -97,7 +106,7 @@ main{
 }
 
 .cardArea{
-    margin:1%;
+    padding:0;
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -106,10 +115,66 @@ main{
 .card{
     width: 25em;
     box-shadow: 0 0 1em rgb(94, 60, 21);
-    margin:5% 1% 5% 1%;
+    margin:5% 0% 5% 0%;
+    border-radius: 5px;
 }
 
 .card p{
-    padding:2%;
+    padding:3%;
     
+}
+
+.foot{
+    background-color: #FFC582;
+    padding: 2%;
+    color:#8D520C;
+    width: 100%;
+    position: relative;
+}
+
+input, textarea{
+    display:block;
+    line-height: 2rem;
+    margin-top:4%;
+    width: 100%;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;
+
+}
+
+#contact{
+    width: 400px;
+    margin: auto;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+#subButton{
+    background-color: #F9935A;
+    color: #4B4844;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold   ;
+}
+
+#subButton:hover{
+    background-color: #8D520C;
+    color: #FEFAEF;
+}
+
+#btop{
+    background-color: #F9935A;
+    color: #4B4844;
+    border: none;
+    border-radius: 5px;
+    font-size: small;
+    font-weight: bold ;
+    padding: 1rem;
+    right:1rem;
+    bottom: 1rem;
+    position: fixed;
+    text-decoration: none;
 }

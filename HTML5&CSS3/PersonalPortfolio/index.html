@@ -8,24 +8,26 @@
     <meta name="keywords" content="Alireza, portfolio">
     <link rel="stylesheet" href="style.css">
     <title>Personal portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header">
         <nav class="band stick" id="nav">
             <div id="logo"><span>Logo</span> </div>
             <ul id="menu">
-                <li><a href="#past">Past</a></li>
-                <li><a href="#present">Present</a></li>
-                <li><a href="#future">Future</a></li>
+                <li><a href="#news"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="#past"><i class="fas fa-poo"></i> Past</a></li>
+                <li><a href="#present"><i class="fas fa-user-graduate"></i> Present</a></li>
+                <li><a href="#future"><i class="fas fa-user-astronaut"></i> Future</a></li> 
             </ul>
         </nav>
         <div class="hvcenter">
-            <h1>Welcome to my awesome portfolio</h1>
+            <h1>Alireza Keshmiry</h1>
         </div>
     </header>
     <main>
-        <section class="timeline" id="past">
-            <h2>Past</h2>
+        <section class="timeline" id="news">
+            <h2><i class="fas fa-newspaper"></i> News</h2>
             <div class="cardArea">
                 <div class="card">
                     <img class="thumb" src="https://source.unsplash.com/random/1600x900" alt="RandomIMG">
@@ -47,13 +49,20 @@
           
         </section>
         <hr>
+        <section class="timeline" id="past">
+            <h2><i class="fas fa-poo"></i> Past</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus sit accusamus earum voluptates dolore
+                eos omnis officia nulla sunt id reiciendis rerum molestiae voluptas, ipsam, alias eum perspiciatis doloribus?
+            </p>
+        </section>
+        <hr>
         <section class="timeline" id="present">
-            <h2>Present</h2>
+            <h2><i class="fas fa-user-graduate"></i> Present</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus sit accusamus earum voluptates dolore eos omnis officia nulla sunt id reiciendis rerum molestiae voluptas, ipsam, alias eum perspiciatis doloribus?</p>
         </section>
         <hr>
         <section class="timeline" id="future">
-            <h2>Future</h2>
+            <h2><i class="fas fa-user-astronaut"></i> Future</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus sit accusamus earum voluptates dolore eos
                 omnis officia nulla sunt id reiciendis rerum molestiae voluptas, ipsam, alias eum perspiciatis doloribus?</p>
         </section>
@@ -61,8 +70,18 @@
 
 
     </main>
-    <footer class="foot band">
-        <span >Copyright ~ Alireza</span>
+    <footer class="foot">
+        <div id="contact">
+            <h3>Contact me</h3>
+            <form id="contactForm">
+                <input type="text" name="name" id="iName" placeholder="Full Name" required/>
+                <input type="email" name="email" id="iEmail" placeholder="Email" required/>
+                <textarea id="iMessage" name="message" rows="6" cols="50" required placeholder="Message">
+                                </textarea>
+                <input id="subButton" type="button" value="submit"/>
+            </form>
+        </div>
+        <a href="#header" id="btop" type="button">Back to top</a>
     </footer>
     <script src="script.js"></script>
 </body>
