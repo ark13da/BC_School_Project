@@ -6,7 +6,7 @@ function Events(name,date) {
 
 let eName, eDate;
 let eventArr = [];
-let today = new Date();
+
 
 let filler = () => {
     eName = document.getElementById('eName').value;
@@ -18,13 +18,14 @@ let pusher = () => {
     let newEvent = new Events(eName,eDate);
     eventArr.push(newEvent);
     document.getElementById('eventForm').reset();
-    document.getElementById("eList").innerHTML= calc();
+    setInterval(function (){document.getElementById("eList").innerHTML = calc(); }
+        , 1000);
     
 }
 
 let calc = () => { 
     let strings = [];
-
+    let today = new Date();
     //normal days
     let date_diff_indays = function (date1, date2) {
         dt1 = new Date(date1);
@@ -52,16 +53,32 @@ let calc = () => {
         return weekends;
     };
 
+    //counter 
+    let timer = (date1, date2) => { 
+        d1 = new Date(date1);
+        d2 = new Date(date2);
+        let seconds = Math.floor((d2 - d1) / 1000);
+        let minutes = Math.floor(seconds / 60);
+        let hours = Math.floor(minutes / 60);
+        let days = Math.floor(hours / 24);
+
+        /*hours = hours - (days * 24);
+        minutes = minutes - (days * 24 * 60) - (hours * 60);
+        seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);*/
+
+        let countDown = `${hours}H : ${minutes}M : ${seconds}S`;
+        return countDown;
+    }
+
+    
     eventArr.map(item => {
-        strings.push('<li>' + `${date_diff_indays(today, item.date)} normal day(s), ${date_diff_indays(today, item.date) - weekEnds(today, item.date)} week day(s) until ${item.name} which is on ${item.date}` + '</li>')
+        strings.push('<li>' + `${date_diff_indays(today, item.date)} normal day(s), ${date_diff_indays(today, item.date) - weekEnds(today, item.date)} week day(s) until ${item.name} which is on ${item.date}. ${timer(today,item.date) }` + '</li>')
     });
     return strings.join('');
 }
 
 document.getElementById("insert").addEventListener("click", pusher);
 
-// weeks *2 - days
-// holidays
 
 
 
