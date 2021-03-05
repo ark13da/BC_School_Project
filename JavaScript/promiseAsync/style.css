@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(248, 227, 108);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    position: relative;
+   
+}
+
+#gridContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: 2px 2px 1px rgba(59, 53, 16, 0.384);
+    overflow: hidden;
+    
+}
+
+.pokeCard{
+    width:125px;
+    height:125;
+    border-radius: 5px;
+    background-color: rgb(231, 156, 126);
+    margin:10px;
+    padding:5px;
+}
+
+.innerCard{
+    background-color: cornsilk;
+    padding:5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+#blurLay{
+    z-index:2;
+    background-color: rgba(128, 128, 128, 0.438);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    display:none;
+}
+
+#overLay{
+    margin:auto;
+    width: 350px;
+    height:450px;
+    background-color: cornsilk;
+    border:5px solid rgb(114, 112, 218);
+    border-radius: 5px;
+    position:fixed;
+    top:3rem;
+    left:40%;
+    z-index: 3;
+}
+
+.pokeLink{
+    background-color: inherit;
+    border: none;
+    cursor:pointer;
+}
+

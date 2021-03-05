@@ -1,0 +1,95 @@
+<!--22012021 html css class portfilio project-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal description based on BC class instructions">
+    <meta name="keywords" content="Alireza, portfolio">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="band stick" id="nav">
+            <div id="flexBand">
+                <a id="logo" href="./index.html#logo"><span>Logo</span> </a>
+                <span id="bars"><i class="fas fa-bars"></i></span>
+                <ul id="menu">
+                    <li><a href="./index.html#news"><i class="fas fa-newspaper"></i> News</a></li>
+                    <li><a href="./index.html#past"><i class="fas fa-poo"></i> Past</a></li>
+                    <li><a href="./index.html#present"><i class="fas fa-user-graduate"></i> Present</a></li>
+                    <li><a href="./index.html#future"><i class="fas fa-user-astronaut"></i> Future</a></li>
+                    <li><a href="#gallery"><i class="fas fa-camera"></i> Gallery</a></li>
+                    <li><a href="./index.html#contact"><i class="fas fa-address-card"></i> Contact</a></li>
+                </ul>
+            </div>
+            <ul id="menuSmall">
+                <li><a href="./index.html#news"><i class="fas fa-newspaper"></i> News</a></li>
+                <li><a href="./index.html#past"><i class="fas fa-poo"></i> Past</a></li>
+                <li><a href="./index.html#present"><i class="fas fa-user-graduate"></i> Present</a></li>
+                <li><a href="./index.html#future"><i class="fas fa-user-astronaut"></i> Future</a></li>
+                <li><a href="#gallery"><i class="fas fa-camera"></i> Gallery</a></li>
+                <li><a href="./index.html#contact"><i class="fas fa-address-card"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hvcenter">
+            <h1>Alireza Keshmiry</h1>
+        </div>
+    </header>
+    <main>
+        <section id="gallery">
+            <div class="container">
+                <div class="galleryGrid">
+                    <div class="gridItem gridItem1">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190727/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem2">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190728/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem3">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190723/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem4">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190725/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem5">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190726/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem6">
+                        <img class="galleryImg" src="https://source.unsplash.com/collection/190723/1600x900" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem7">
+                        <img class="galleryImg" src="https://source.unsplash.com/daily" alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem8">
+                        <img class="galleryImg" src="https://source.unsplash.com/weekly " alt="randPic" />
+                    </div>
+                    <div class="gridItem gridItem9">
+                        <img class="galleryImg" src="https://source.unsplash.com/daily" alt="randPic" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="foot">
+        <div id="contact">
+            <h3>Contact me</h3>
+            <form id="contactForm">
+                <input type="text" name="name" id="iName" placeholder="Full Name" required />
+                <input type="email" name="email" id="iEmail" placeholder="Email" required />
+                <textarea id="iMessage" name="message" rows="6" cols="50" required placeholder="Message">
+                                </textarea>
+                <input id="subButton" type="button" value="submit" />
+            </form>
+        </div>
+        <a href="#header" id="btop" type="button">Back to top</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
