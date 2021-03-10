@@ -1,8 +1,17 @@
+:root{
+    --orangeBack:#F9935A;
+    --lightOrangeBack:#FFC582;
+    --brownBack:#8D520C;
+    --graphit:#4B4844;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+
+
 
 html{
     scroll-behavior: smooth;
@@ -11,15 +20,15 @@ html{
 body{
     background-color: #FEFAEF;
     font-family: 'Roboto', sans-serif; 
-    color:#4B4844;
+    color: var(--graphit);
     line-height: 1.2rem;
   
 }
 
 .band{
-    background-color: #FFC582;
+    background-color: var(--lightOrangeBack);
     padding: 1%;
-    color:#8D520C;
+    color:var(--brownBack);
     width: 100%;
     z-index:1;
 }
@@ -40,12 +49,12 @@ body{
 }
 
 #bars{
-   color:#8D520C; 
+   color:var(--brownBack);
    display: none;
 }
 
 #bars:hover{
-   color: #F9935A;
+   color: var(--orangeBack);
    cursor:pointer;
 }
 
@@ -58,19 +67,19 @@ ul{
 
 ul li {
     display: inline;
-    color:#8D520C;
+    color:var(--brownBack);
     padding: 5px;
 }
 
 ul li a {
 
-    color:#8D520C;
+    color:var(--brownBack);
     text-decoration: none;
     
 }
 
 ul li a:hover{
-        color: #F9935A;
+        color:var(--orangeBack);
     }
 
 #menuSmall{
@@ -113,7 +122,7 @@ header{
       justify-content: center;
       align-items: center;
       padding:2%;
-      color:#4B4844;
+      color:var(--graphit);
       height: 100%;
       width:100%;
       position: relative;
@@ -165,9 +174,9 @@ header{
 }
 
 .foot{
-    background-color: #FFC582;
+    background-color: var(--lightOrangeBack);;
     padding: 2%;
-    color:#8D520C;
+    color:var(--brownBack);
     width: 100%;
     position: relative;
 }
@@ -193,21 +202,21 @@ h2{
 }
 
 #subButton{
-    background-color: #F9935A;
-    color: #4B4844;
+    background-color: var(--orangeBack);
+    color: var(--graphit);
     border: none;
     border-radius: 5px;
     font-weight: bold   ;
 }
 
 #subButton:hover{
-    background-color: #8D520C;
+    background-color: var(--brownBack);
     color: #FEFAEF;
 }
 
 #btop{
     background-color: #f9945ad5;
-    color: #4B4844;
+    color: var(--graphit);
     border: none;
     border-radius: 5px;
     font-size: small;

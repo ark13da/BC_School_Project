@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather api</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h2 id="hTitle">Check weather</h2>
+        </div>
+        <hr/>
+        <div class="inp">
+            <form id="inpform">
+                <label for="city">City:</label>
+                <input type="text" name="city" id="city" placeholder="Enter city name" required/>
+                <input type="button" id="trigButton" value="Get weather" >
+            </form>
+        </div>
+        <div class="image"></div>
+        <div class="temp">
+            <h3 id="place"></h3>
+            <h4 id="degree"></h4>
+        </div>
+
+    </main>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
