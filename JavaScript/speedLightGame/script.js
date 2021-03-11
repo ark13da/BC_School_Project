@@ -1,7 +1,4 @@
 
-//conditional end message
-//background img light
-// sound start and end
 (function () {
 
     let speed = 800;
