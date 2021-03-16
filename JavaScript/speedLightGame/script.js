@@ -75,6 +75,7 @@
                 let attr = e.target.value;
                 if (attr === "1") {
                     score += 1;
+                    randCount = score;
                     speed -= 50;
                     document.getElementById("hScore").textContent = 'Score: ' + score;
                 } else {
