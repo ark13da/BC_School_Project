@@ -14,7 +14,7 @@
     <header id="header">
         <nav class="band stick" id="nav">
             <div id="flexBand">
-                <a id="logo" href="#logo"><span>Logo</span> </a>
+                <a id="logo" href="#hvtxt"><span>Logo</span> </a>
                 <span id="bars"><i class="fas fa-bars"></i></span>
                 <ul id="menu">
                     <li><a href="#news"><i class="fas fa-newspaper"></i> News</a></li>
@@ -35,12 +35,12 @@
                 </ul>
         </nav>
         <div class="hvcenter">
-            <h1 class="textShadow">Alireza Keshmiry</h1>
+            <h1 class="textShadow" id="hvtxt">Alireza Keshmiry</h1>
         </div>
     </header>
     <main>
         <section class="timeline" id="news">
-            <h2><i class="fas fa-newspaper"></i> News</h2>
+            <h2 id="animated"><i class="fas fa-newspaper"></i> News</h2>
             <div class="cardArea">
                 <div class="card">
                     <img class="thumb" src="https://source.unsplash.com/random/1600x900" alt="RandomIMG">
@@ -63,15 +63,24 @@
         </section>
         <hr>
         <section class="timeline" id="past">
+            <img class="rfloat" src="https://source.unsplash.com/random/1600x900" alt="RandomIMG">
             <h2><i class="fas fa-poo"></i> Past</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus sit accusamus earum voluptates dolore
                 eos omnis officia nulla sunt id reiciendis rerum molestiae voluptas, ipsam, alias eum perspiciatis doloribus?
             </p>
+            
         </section>
         <hr>
         <section class="timeline" id="present">
             <h2><i class="fas fa-user-graduate"></i> Present</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed voluptatibus sit accusamus earum voluptates dolore eos omnis officia nulla sunt id reiciendis rerum molestiae voluptas, ipsam, alias eum perspiciatis doloribus?</p>
+            <ul id="skills">
+                <li>React.js <i class="fab fa-react"></i> <progress max="100" value="60"></progress></li>
+                <li>HTML <i class="fab fa-html5"></i> <progress max="100" value="80"></progress></li>
+                <li>CSS <i class="fab fa-css3"></i> <progress max="100" value="70"></progress></li>
+                <li>JS <i class="fab fa-js"></i> <progress max="100" value="85"></progress></li>
+                
+            </ul>
+            
         </section>
         <hr>
         <section class="timeline" id="future">

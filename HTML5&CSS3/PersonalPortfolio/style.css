@@ -75,16 +75,22 @@ ul li a {
 
     color:var(--brownBack);
     text-decoration: none;
+    transition-property: font-size;
+    transition-duration: 2s;
     
 }
 
 ul li a:hover{
         color:var(--orangeBack);
+        font-size: 2rem;
     }
 
 #menuSmall{
     display: none;
 }
+
+
+
 
 @media screen and (max-width: 576px) {
     #bars{
@@ -143,15 +149,13 @@ header{
 
 .timeline{
     padding:4%;
+    overflow: hidden;
   
 }
 
   .thumb{
     width: 100%;
 }
-
-
-
 
 
 .cardArea{
@@ -171,6 +175,33 @@ header{
 .card p{
     padding:3%;
     
+}
+
+#animated{
+    animation-name: shift;
+    animation-duration: 3s;
+}
+
+@keyframes shift {
+  0%   {text-align: left;}
+  50%  {text-align: center;}
+  100% {text-align: right;}
+}
+
+
+.rfloat{
+    width: 30%;
+    float: right;
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+.rfloat:hover{
+    width:40%;
+}
+
+#skills li{
+    display: block;
 }
 
 .foot{
