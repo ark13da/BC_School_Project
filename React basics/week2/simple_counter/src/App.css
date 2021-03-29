@@ -1,0 +1,18 @@
+.circle{
+  background-color: gray;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+
+.even{
+  background-color: chartreuse;
+}
+
+.odd{
+  background-color: cornflowerblue;
+}
