@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color:rgb(243, 161, 103);
+    width:100%;
+    position: fixed;
+}
+
+.topNav li{
+    display: inline;
+    list-style: none;
+    padding: .5rem;
+}
