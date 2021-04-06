@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div className="motherContainer">
       <Router>
         <Header />
         <Switch>
