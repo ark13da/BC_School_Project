@@ -71,7 +71,7 @@ class Recipes extends Component {
                 {this.state.data.map(item=>
                     <div className="recipe" key={ item.id}>
                         <img className="thumbnail" src={item.image} alt="foodPic" />
-                        <h4>{item.title}</h4>
+                        <h4 className="foodTitle">{item.title}</h4>
                     </div>
                 )}
             </div>

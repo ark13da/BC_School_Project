@@ -12,14 +12,19 @@
 
 .recipe{
     width:300px;    
-    border: 1px solid gray;
+    border: 1px dotted rgb(177, 175, 175);
     border-radius: 4px;
-    box-shadow: 2px 2px 2px gray(0, 0, 0, 0.527);
+    box-shadow: 1px 1px 2px gray;
     padding: 5px;
     margin:1rem;
     overflow: hidden;
+    
 }
 
 .thumbnail{
     width:100%;
+}
+
+.foodTitle{
+    color:rgb(82, 80, 80);
 }

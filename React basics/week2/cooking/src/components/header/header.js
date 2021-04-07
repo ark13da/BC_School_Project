@@ -18,7 +18,7 @@ const Nav = () => {
 const Header = () => {
     return (
         <div className="headBar">
-            <h4 className="topLogo"><Link>Logo</Link></h4>
+            <h4 className="topLogo"><Link to="/">Logo</Link></h4>
             <Nav/>
         </div>
     );

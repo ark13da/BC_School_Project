@@ -13,8 +13,30 @@
     position: fixed;
 }
 
+.topLogo a{
+    text-decoration: none;
+    color:white;
+}
+.topLogo a:hover{
+
+    color:brown;
+}
+
 .topNav li{
     display: inline;
     list-style: none;
     padding: .5rem;
+    font-weight: 500;
+    
+    
+}
+
+.topNav li a{
+   text-decoration: none; 
+   color:white;
+}
+
+.topNav li a:hover{
+   
+   color:brown;
 }
