@@ -1,0 +1,11 @@
+.App{
+  width:50%;
+  margin:auto;
+  text-align: center;
+}
+
+.circleList{
+  display:flex;
+  justify-content: space-between;
+  
+}
