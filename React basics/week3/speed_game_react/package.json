@@ -1,5 +1,6 @@
 {
   "name": "speed_game_react",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
