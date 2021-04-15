@@ -1,0 +1,14 @@
+
+.animalContainer{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cage{
+    width:200px;
+    overflow: hidden;
+}
+
+.cageImg{
+    width:100%;
+}

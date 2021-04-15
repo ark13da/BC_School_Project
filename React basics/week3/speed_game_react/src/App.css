@@ -6,7 +6,9 @@
 }
 
 .circleList{
+  width:60%;
   display:flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin:auto;
   
 }
