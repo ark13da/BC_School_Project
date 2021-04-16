@@ -38,7 +38,7 @@ const Form = (props) => {
                 <div className="formControl">
                     <label htmlFor="message">Message</label>
                     <textarea
-                        name="Message"
+                        name="message"
                         placeholder="Message"
                         rows="5"
                         required
@@ -48,7 +48,7 @@ const Form = (props) => {
                 <div className="formControl">
                     <label htmlFor="Role">Role</label>
                     <select
-                        name="Role"
+                        name="role"
                         required
                         onChange={props.change}
                     >
@@ -56,6 +56,10 @@ const Form = (props) => {
                         <option value="teacher">Teacher</option>
                     </select>
                 </div>
+                <div className="formControl">
+                    <button type="button" onClick={props.click}>Submit</button>
+                </div>
+
         </form>
       </div>
     );

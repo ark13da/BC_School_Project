@@ -59,35 +59,55 @@
             await rawData(pageNumber);
             await listMaker();
         }
+
+        function btnDisabler(){
+           if(pageNumber==1){
+                document.getElementById("prevBtn").disabled=true;
+                document.getElementById("nextBtn").disabled=false;
+            }else if (pageNumber==pageCount){
+                document.getElementById("nextBtn").disabled=true;
+                document.getElementById("prevBtn").disabled=false;
+            }else{
+                document.getElementById("prevBtn").disabled=false;
+                document.getElementById("nextBtn").disabled=false;
+            } 
+        }
         
 
         window.onload =  async () => {
             await rawData(pageNumber);
             await listMaker();
-            await createBtn();  
+            await createBtn();
+            btnDisabler();  
             PageBTNs= Array.from(document.getElementsByClassName("pageBtn")); 
             PageBTNs.forEach(el=>{
                 el.addEventListener("click", (e)=>{
                     pageNumber=e.target.value;
-                    updateList(); 
-                    el.setAttribute("active",true);
+                    updateList();
+                    btnDisabler(); 
                 })
-                //if(pageNumber!==el.value){
-                //        el.setAttribute("disabled",false);
-                //    }
             });
+            
             document.getElementById("nextBtn").addEventListener('click', ()=>{
-                pageNumber+=1;
-                updateList(); 
+                if (pageNumber<pageCount){
+                    pageNumber++;
+                    updateList(); 
+                    btnDisabler()
+                }
             });
             document.getElementById("prevBtn").addEventListener('click', ()=>{
-                pageNumber-=1;
-                updateList(); 
+                if (pageNumber>1){
+                    pageNumber--;
+                    updateList(); 
+                    btnDisabler();
+                }
             });
+
+           
 
         };
 
-       
+
         
     </script>
 </body>
