@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Pokemons</h1>
+    <a href="new_pokemon.php">Add new pokemon</a>
     <ul id="displayList">
     </ul>
     <div id="btnBox">

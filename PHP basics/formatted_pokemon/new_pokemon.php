@@ -7,6 +7,7 @@
     <title>pokemon form</title>
 </head>
 <body>
+    <a href="index.php">Back to home page</a>
      <form action="formatted_pokemon.php" method="POST">
          <input type="text" name="id" placeholder="ID">
          <br>

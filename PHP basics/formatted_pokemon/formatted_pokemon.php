@@ -1,25 +1,48 @@
 <?php
-    $data = file_get_contents('pokemon.json');
     
+    //$data = file_get_contents('pokemon.json');
+    //    
+    //// echo '<pre>';
+    //$formatted_data = json_decode($data, true);
+    //$results = $formatted_data['results'];
+     $data = file_get_contents('modified.json');
+        
     // echo '<pre>';
     $formatted_data = json_decode($data, true);
-    $results = $formatted_data['results'];
+    $results = $formatted_data;
 
     //adding new pokemons
     if (isset($_POST['name'])){
         $id_regex= '/(' . $_POST['id'] .'\/)$/';
+        $post_response=array();
         for ($i = 0; $i < count($results); $i++){
             if(strtoupper($_POST['name'])==$results[$i]['name'] || preg_match($id_regex, $results[$i]['url'])){
-                echo 'no go';
+                $post_response['status']=500;
+                $post_response['message']='Error saving new pokemon. Duplication found';
+                $json_post_response=json_encode( $post_response);
+                echo $json_post_response;
+                echo $results[count($results)-1]['url'];
                 return;
             }else{
-                echo 'good to go';
+                $post_response['status']=200;
+                $post_response['message']='Success! new pokemon added';
+                $next_available_index=count($results);
+                $results[$next_available_index]['name']=$_POST['name'];
+                $results[$next_available_index]['url']='https://alireza/api/'.$_POST['type'].'/pokemon/'.$_POST['id'].'/';
+                $json_modified=json_encode( $results, JSON_UNESCAPED_SLASHES);
+                file_put_contents('modified.json', $json_modified);
+                $json_post_response=json_encode( $post_response);
+                echo $json_post_response; 
                 return;
             }
-        
         }
-    }
+        
+    }else{
 
+    
+
+    }
+    
     $chunked_results= array_chunk($results,50);
     $formatted_results = array();
     $page_number = 0;
@@ -35,8 +58,6 @@
         $formatted_results[$i]['url'] = $chunked_results[$page_number][$i]['url'];
         
     }
-
-    
     // print_r($formatted_data);
     // echo '</pre>';
 
