@@ -3,11 +3,12 @@ import React from 'react';
 const View = (props) => {
     return (
         <div >
-            <p>First Name: {props.firstName}</p>
-            <p>Last Name: {props.lastName}</p>
-            <p>Phone Number: {props.phone}</p>
-            <p>Message: {props.message}</p>
-            <p>Role: {props.role}</p>
+            <h2>View your input</h2>
+            <p><b>First Name:</b> {props.firstName}</p>
+            <p><b>Last Name:</b> {props.lastName}</p>
+            <p><b>Phone Number:</b> {props.phone}</p>
+            <p><b>Message:</b> {props.message}</p>
+            <p><b>Role:</b> {props.role}</p>
       </div>
     );
 };

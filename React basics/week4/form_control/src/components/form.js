@@ -1,18 +1,19 @@
 import React from 'react';
 import "./style.css";
 
-const Form = (props) => {
+const Form = ({click,change}) => {
     return (
       <div>
-            <form>
+            <form onSubmit={click} >
                 <div className="formControl">
                     <label htmlFor="firstName">First Name</label>
                     <input
                         type="text"
                         name="firstName"
+                        id="firstName"
                         placeholder="First name"
                         required
-                        onChange={props.change}
+                        onChange={change}
                     ></input>
                 </div>
                 <div className="formControl">
@@ -20,9 +21,10 @@ const Form = (props) => {
                     <input
                         type="text"
                         name="lastName"
+                        id="lastName"
                         placeholder="Last name"
                         required
-                        onChange={props.change}
+                        onChange={change}
                     ></input>
                 </div>
                 <div className="formControl">
@@ -30,34 +32,37 @@ const Form = (props) => {
                     <input
                         type="number"
                         name="phone"
+                        id="phone"
                         placeholder="Phone number"
                         required
-                        onChange={props.change}
+                        onChange={change}
                     ></input>
                 </div>
                 <div className="formControl">
                     <label htmlFor="message">Message</label>
                     <textarea
                         name="message"
+                        id="message"
                         placeholder="Message"
                         rows="5"
                         required
-                        onChange={props.change}
+                        onChange={change}
                     ></textarea>
                 </div>
                 <div className="formControl">
                     <label htmlFor="Role">Role</label>
                     <select
                         name="role"
+                        id="role"
                         required
-                        onChange={props.change}
+                        onChange={change}
                     >
                         <option value="student">Student</option>
                         <option value="teacher">Teacher</option>
                     </select>
                 </div>
                 <div className="formControl">
-                    <button type="button" onClick={props.click}>Submit</button>
+                    <input type="submit"  value="Submit"/>
                 </div>
 
         </form>

@@ -1,82 +1,59 @@
 import React, { Component} from 'react';
 import "./recipes.css";
-import { config } from "./config.js"
+import jsonData from "./recipe_list.json";
 
 
 class Recipes extends Component {
+  state = {
+    recipes: []
+  };
 
-    state = {
-        data: []
-    };
+ 
+  fillTheStore() {
+    let recipeList = [];
 
-
+    let newRecipe = (id, name, img, link) => {
+      let recipe = {};
+      recipe.id = id;
+      recipe.name = name;
+      recipe.img = img;
+      recipe.link = link; 
+      return recipe;
+    }
     
-    fillTheStore() {
-        const url = "https://api.spoonacular.com/recipes/random?apiKey=" + config.recipeKey;
-            fetch(url).then(res => {
-                if (res.ok) {
-                
-                    return res.json();
-                } else {
-                    console.log('error');
-                }
-            })
-                .then(json => {
-                    
-                    this.setState({
-                        
-                        data: [...this.state.data, json.recipes[0]]
-                    });
+    jsonData.forEach(i => {
+      let item = newRecipe(i[0].id, i[0].title, i[0].image, i[0].spoonacularSourceUrl);
+      recipeList.push(item);
+    });
 
-                    //image
-                    //summary
-                    //instructions
-                    //[array]extendedIngredients.originalString
-                    //sourceUrl
-                })
-                .catch(err => {
-                    console.log('error');
-                })
-    }
+    //filter out duplicates
 
-   /* 
-   //coverting strigified array back to array is challenging 
-   componentDidMount() {
-        if (this.storage.getItem('storedRecipes') === null || !JSON.parse(this.storage.getItem('storedRecipes')).length){
-            for (let i = 0; i < 3; i++) {
-            this.fillTheStore();
-            }
-            this.storage.setItem('storedRecipes', this.recipeList.toString());
-            this.setState({
-            data: JSON.parse(this.storage.getItem('storedRecipes'))
-            });
-        }
+    this.setState({
+      recipes: recipeList
+    })
+    
+  }
 
-    }*/
-    componentDidMount() {
-        if (!this.state.data.length) {
-            for (let i = 0; i < 4; i++) {
-                this.fillTheStore();
-            }
-            
-        }
+  componentDidMount(){
+    this.fillTheStore();
+ }
 
-    } 
+  
+  render() {
 
-
-    render() {
-        
-        return (
-            <div className="recipesContent">
-                {this.state.data.map(item=>
-                    <div className="recipe" key={ item.id}>
-                        <img className="thumbnail" src={item.image} alt="foodPic" />
-                        <h4 className="foodTitle">{item.title}</h4>
-                    </div>
-                )}
-            </div>
-        );
-    }
+    return (
+      <div className="recipesContent">
+        {this.state.recipes.map((item) => (
+          <div className="recipe" key={item.id}>
+            <a href={item.link} target="_blank">
+              <img className="thumbnail" src={item.img} alt="foodPic" />
+              <h4 className="foodTitle">{item.name}</h4>
+            </a>
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Recipes;

@@ -1,6 +1,6 @@
 
 .footBar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 1rem;
     background-color: rgb(243, 161, 103);
