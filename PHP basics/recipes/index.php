@@ -81,11 +81,58 @@
 
 
         function update_recipe(){
+            if (isset($_GET['id']) && isset($_GET['name'])){
 
+                $test_exists= array_filter($GLOBALS['decoded_data']['recipes'], function($i){
+                return $i['id']==$_GET['id'];
+                });
+
+                if (!count($test_exists)>0){
+                        echo json_encode(array('message'=>'Item does not exist'));
+                }else{
+                       for($i=0;$i<count($GLOBALS['decoded_data']['recipes']);$i++){
+                           if($GLOBALS['decoded_data']['recipes'][$i]['id']== $_GET['id']){
+                               $GLOBALS['decoded_data']['recipes'][$i]['name']= $_GET['name'];
+                           }
+                       }
+                       $response= json_encode($GLOBALS['decoded_data']['recipes']);
+                      //i would like to avoide mutating data but at this point i want to see results of my actions
+                       $new_array= array();
+                       $new_array['recipes']=$GLOBALS['decoded_data']['recipes'];
+                       //file_put_contents('new_data.json', json_encode($new_array));
+                       file_put_contents('data.json', json_encode($new_array));
+                       echo $response;
+                   }
+            }else{
+                echo json_encode(array('message'=>'Incomplete request'));
+            }
         }
 
         function remove_recipe(){
+              if (isset($_GET['id'])){
 
+                $test_exists= array_filter($GLOBALS['decoded_data']['recipes'], function($i){
+                return $i['id']==$_GET['id'];
+                });
+                $modified_array= array();
+                if (!count($test_exists)>0){
+                        echo json_encode(array('message'=>'Item does not exist'));
+                }else{
+                       $modified_array= array_filter($GLOBALS['decoded_data']['recipes'], function($i){
+                        return $i['id']!==$_GET['id'];
+                        });
+                    }
+                       $response= json_encode($modified_array);
+                      //i would like to avoide mutating data but at this point i want to see results of my actions
+                       $new_array= array();
+                       $new_array['recipes']=$modified_array;
+                       //file_put_contents('new_data.json', json_encode($new_array));
+                       file_put_contents('data.json', json_encode($new_array));
+                       echo $response;
+                   }
+            else{
+                echo json_encode(array('message'=>'Incomplete request'));
+            }
         }
 
     ?>

@@ -11,7 +11,7 @@ const Overlay = (props) => {
         <div className="overlayWindow">
           <p>Game over</p>
           <p>your score is: {props.score}</p>
-          <button onClick={closeHandler}>X</button>
+          <button className="closeBtn" onClick={closeHandler}>X</button>
         </div>
       </div>
     );

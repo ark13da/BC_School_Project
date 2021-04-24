@@ -3,12 +3,14 @@ import "./App.css";
 import Circle from "./components/circle.js";
 import Overlay from "./components/overlay.js";
 import endsound from "./assets/audio/endsound.wav"
+import emraldHill from "./assets/audio/emraldHill.mp3"
 
 const getRandInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min+1)+min);
 };
 
 const gameOverSound = new Audio(endsound);
+const gameRunSound = new Audio(emraldHill);
 
 class App extends Component {
   state = {
@@ -68,6 +70,7 @@ class App extends Component {
   }
 
   startHandler = () => {
+    gameRunSound.play();
     this.nextCircle();
     
   }
@@ -78,6 +81,7 @@ class App extends Component {
       gameOver: true,
       round: 0,
     });
+    gameRunSound.pause();
     gameOverSound.play();
   }
 
@@ -98,8 +102,8 @@ class App extends Component {
     return (
       <main>
         <div className="App">
-          <h1>Speedtest</h1>
-          <p>Your score is: {this.state.score}</p>
+          <h1 className="titleText">Speedtest</h1>
+          <h3 className="titleText">Your score is: {this.state.score}</h3>
           <div className="circleList">{circleList}</div>
           <button onClick={this.startHandler} disabled={this.state.gameStart}>
             Start
