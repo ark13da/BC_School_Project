@@ -13,11 +13,13 @@ function App() {
     <div >
       <Router className="motherContainer">
         <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/recipes" component={Recipes} />
-        </Switch>
+        <div className="content">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/recipes" component={Recipes} />
+          </Switch>
+        </div>
         <Footer/>
       </Router>
     </div>

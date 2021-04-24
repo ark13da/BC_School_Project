@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import "./recipes.css";
-import jsonData from "./recipe_list.json";
+import jsonData from "./recipes_list.json";
 
 
 class Recipes extends Component {

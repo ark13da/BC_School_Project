@@ -3,12 +3,19 @@ import "./about.css";
 
 const About = () => {
     return (
-        <div className="aboutContent">
-            <h1>About</h1>
-            <p>This project was requested by margit at react21k course.</p>
-            <p>The recipes are privided by an API. since a free version of the API is being used, there is a daily limit of 150 recipes. thus, only a couple of random recipes are being fetched each time not to exceed the limit.</p>
-            
-        </div>
+      <div className="aboutContent">
+        <h1>About</h1>
+        <p>
+                This project was done as a homework at react21k course in business
+                college helsinki.
+        </p>
+            <br/>
+        <p>
+          The recipes are fetched from an API provided at
+          'https://api.spoonacular.com'. since a free version of the API is being
+          used, it has daily request limit. thus, a list of some 95 recipes was fetched using PHP and was saved in a json file where the front end of the application can list recipes from.
+        </p>
+      </div>
     );
 };
 
