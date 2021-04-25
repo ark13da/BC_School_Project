@@ -47,7 +47,7 @@ class Recipes extends Component {
           <div className="recipe" key={item.id}>
             <a href={item.link} target="_blank">
               <img className="thumbnail" src={item.img} alt="foodPic" />
-              <h4 className="foodTitle">{item.name}</h4>
+              <p className="foodTitle">{item.name}</p>
             </a>
           </div>
         ))}
