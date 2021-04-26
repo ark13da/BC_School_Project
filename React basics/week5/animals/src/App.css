@@ -1,0 +1,127 @@
+header,
+footer {
+  background-color: #69013b;
+  color: #fce0d3;
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+}
+
+main {
+  background-color: #fff;
+  padding: 2rem;
+  min-height: calc(100vh - 170px);
+}
+main h2,
+main p {
+  margin: 2rem 0;
+}
+
+main button {
+  background-color: #fce0d1;
+  border: none;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  display: block;
+}
+
+.posts {
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  list-style: none;
+}
+
+.post {
+  background: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #787878;
+  border: 10px solid #f4f4f4;
+  position: relative;
+}
+
+.post img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 150px;
+}
+
+.post h2 {
+  padding: 0.1rem 1rem;
+}
+
+.remove {
+  position: absolute;
+  background: white;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  right: -20px;
+  top: -20px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgb(177, 177, 177);
+  cursor: pointer;
+}
+
+button {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #69013b;
+  color: white;
+}
+
+form {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+input,
+select,
+textarea {
+  display: inline-block;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  width: 200px;
+  border: 1px solid #333;
+  border-radius: 2px;
+}
+label {
+  display: block;
+  margin-bottom: -1rem;
+}
+
+.animalCard{
+  width:300px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px grey dotted;
+  margin: 10px;
+  border-radius: 0 0 5px 5px;
+  padding-bottom: 5px;
+}
+
+.thumbnail{
+  width: 100%;
+}
+
+.AnimalList{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+label{
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
