@@ -11,14 +11,15 @@ const Weather = () => {
     useEffect(() => {
         axios.get(url)
             .then(res => setWeather(res.data))
-            .then(res => console.log(weather))
-            //.then(res => setisLoading(false));
-    },[])
+            .then(res => setisLoading(false));
+    }, []);
     
     return (
-        <div>
-            
-        </div>
+      <div>
+        <p>
+          Temprature in {weather.name && weather.name} is {weather.name && weather.main.temp} degrees
+        </p>
+      </div>
     );
 };
 

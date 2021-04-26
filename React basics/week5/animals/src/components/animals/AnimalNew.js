@@ -2,7 +2,7 @@ import React from 'react';
 
 const AnimalNew = ({change,click}) => {
     return (
-      <div className={AnimalNew}>
+      <div className="AnimalNew">
         <form onSubmit={click}>
           <div>
             <label htmlFor="name">Name:</label>
