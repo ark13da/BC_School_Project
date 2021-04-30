@@ -1,8 +1,9 @@
 import axios from "axios";
-import React, { useState } from "react";
-import AnimalList from '../animals/AnimalList';
+import React, { useState, useEffect } from "react";
 import AnimalNew from '../animals/AnimalNew';
-
+import AnimalCard from "../animals/AnimalCard";
+import AnimalSingle from "../animals/AnimalSingle";
+import { Switch, Route } from "react-router-dom";
 
 
 const Main = () => {
@@ -12,21 +13,46 @@ const Main = () => {
     aclass: "",
     img: "",
     desc: "",
-    link: ""
+    //link: ""
   });
 
+  const [animals, setAnimals] = useState([]);
+
+  useEffect(()=>{
+    axios.get("http://localhost:3001/animals").then((res) => {
+      setAnimals(res.data);
+    });
+  }, [])
+  
   const changeHandler = (e) => {
     setNewAnimal({...newAnimal, [e.target.name]: e.target.value})
   }
   const submitAnimal = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3001/animals", newAnimal);
+    axios.post("http://localhost:3001/animals", newAnimal)
+      .then(() => {
+        return axios.get("http://localhost:3001/animals").then((res) => {
+          setAnimals(res.data);
+        });
+      })
+    e.target.reset();
   }
-
+  
   return (
     <main>
-      <AnimalList />
-      <AnimalNew change={changeHandler} click={ submitAnimal} />
+      <Switch>
+        <Route path="/:id">
+          <AnimalSingle />
+        </Route>
+        <Route path="/" exact>
+          <div className="AnimalList">
+            {animals.map((animal) => (
+              <AnimalCard key={animal.id} {...animal} link={animal.id} />
+            ))}
+          </div>
+          <AnimalNew change={changeHandler} click={submitAnimal} />
+        </Route>
+      </Switch>
     </main>
   );
 };
