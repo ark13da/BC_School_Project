@@ -1,0 +1,12 @@
+.aboutContent{
+   
+    padding: 5rem;
+}
+
+@media screen and (max-width: 576px){
+ 
+   .aboutContent{
+   
+    padding: 5rem .5rem;
+}  
+}

@@ -13,9 +13,7 @@ const AnimalCard = ({ name, aclass, img, link, desc }) => {
                 <em>{aclass}</em>
             <p>{truncate(desc, 30)} ...</p>
             <Link to={`/${link}`}>Link</Link>
-            {/* 
-            <a href={link} target="_blank" rel="noreferrer"> Read more</a>
-            */}
+            
         </div>
     );
 };

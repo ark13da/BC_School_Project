@@ -12,8 +12,7 @@ const Main = () => {
     name: "",
     aclass: "",
     img: "",
-    desc: "",
-    //link: ""
+    desc: ""
   });
 
   const [animals, setAnimals] = useState([]);

@@ -1,0 +1,20 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Minced kebab",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Kabab_koobideh_bbq_persian_food.jpg/330px-Kabab_koobideh_bbq_persian_food.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Herb stew",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ghormeh_Sabzi.JPG/330px-Ghormeh_Sabzi.JPG"
+    },
+    {
+      "id": 3,
+      "title": "broth and bread",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Dizi.jpg/330px-Dizi.jpg"
+    }
+
+  ]
+}

@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color:rgb(247, 131, 54);
+    width:100%;
+    position: fixed;
+}
+
+.topLogo a{
+    text-decoration: none;
+    color:white;
+}
+.topLogo a:hover{
+
+    color:brown;
+}
+
+.topNav li{
+    display: inline;
+    list-style: none;
+    padding: .5rem;
+    font-weight: 500;
+    
+    
+}
+
+.topNav li a{
+   text-decoration: none; 
+   color:white;
+}
+
+.topNav li a:hover{
+   
+   color:brown;
+}
