@@ -41,6 +41,26 @@
       <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/heroku-symfony/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/symfony/proxy-manager-bridge" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/heroku-symfony/vendor/symfony/stopwatch" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

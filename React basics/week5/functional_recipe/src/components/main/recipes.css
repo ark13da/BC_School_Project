@@ -3,8 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+.marginTop{
+  padding:5rem 0 0 3rem;  
+}
 .recipesContent{
-    padding:5rem;
+    padding-top: 2rem;
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;

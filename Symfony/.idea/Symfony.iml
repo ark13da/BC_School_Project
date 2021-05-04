@@ -45,6 +45,26 @@
       <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/friendsofphp/proxy-manager-lts" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/laminas/laminas-code" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/laminas/laminas-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/laminas/laminas-zendframework-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/event-manager" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/orm" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/deprecations" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/sql-formatter" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/doctrine-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/common" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/collections" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/doctrine-migrations-bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/doctrine/persistence" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/symfony/proxy-manager-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/symfony/doctrine-bridge" />
+      <excludeFolder url="file://$MODULE_DIR$/heroku-symfony/vendor/symfony/stopwatch" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

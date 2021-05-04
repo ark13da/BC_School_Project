@@ -39,6 +39,7 @@ const Main = () => {
   
   return (
     <main>
+     
       <Switch>
         <Route path="/:id">
           <AnimalSingle />
