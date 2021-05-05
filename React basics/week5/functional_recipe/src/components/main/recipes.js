@@ -4,7 +4,7 @@ import RecipeCard from "./RecipeCard.js";
 import SingleRecipe from "./SingleRecipe.js";
 import axios from "axios";
 import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
-
+import { ButtonGroup,Button, TextField } from "@material-ui/core";
 
 const Recipes =()=> {
   let { path, url } = useRouteMatch();
@@ -21,11 +21,12 @@ const Recipes =()=> {
   const searchHandler = () => {
     setSearchExists(searchTerm);
     setSearchTerm("");
-    document.getElementById("search").value = "";
+    
   };
   const clearHandler = () => {
     setSearchExists('');
     setSearchTerm('');
+    document.getElementById("search").value = "";
   };
 
   const matchSearch = () => {
@@ -34,20 +35,27 @@ const Recipes =()=> {
         (i) => i.title.toLowerCase() === searchExists.toLowerCase()
       );
       setRecipeList(searchMatch);
-      document.getElementById("search").innerHTML='';
+      document.getElementById("search").innerHTML = '';
+      //console.log(searchExists);
+      //console.log(searchMatch);
+      //console.log(recipeList);
     }
   };
+  
+  const myFunc = async () => {
+    let res = await axios.get("http://localhost:3001/recipes");
+    setRecipeList(res.data);
+    matchSearch();
+    //console.log(recipeList);
+    //console.log(recipeList);
+    };
 
   useEffect(() => {
     setIsLoading(true);
-    axios
-      .get("http://localhost:3001/recipes")
-      .then((res) => {
-        setRecipeList(res.data);
-      })
-      .then((res) => matchSearch());
+    myFunc();
     setIsLoading(false);
   }, [searchExists]);
+
 
   if (isLoading) {
     return <div className="recipesContent">Loading...</div>;
@@ -76,18 +84,15 @@ const Recipes =()=> {
 */
   return (
     <div className="marginTop">
-      <input
-        type="text"
-        id="search"
-        placeholder="Search recipe"
-        onChange={changeHandler}
-      />
-      <button type="button" onClick={searchHandler}>
-        Search
-      </button>
-      <button type="button" onClick={clearHandler}>
-        Clear search
-        </button>
+      <TextField id="search" label="Search recipe" onChange={changeHandler} />
+      <ButtonGroup
+        variant="text"
+        size="small"
+        aria-label="small text button group"
+      >
+        <Button onClick={searchHandler}>Search</Button>
+        <Button onClick={clearHandler}>Clear</Button>
+      </ButtonGroup>
       <div className="recipesContent">
         <Switch>
           <Route path="/recipes" exact>
@@ -99,7 +104,6 @@ const Recipes =()=> {
                 title={item.title}
               />
             ))}
-            
           </Route>
           <Route path={`${path}/:id`}>
             <SingleRecipe />

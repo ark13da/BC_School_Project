@@ -19,6 +19,16 @@
       "title": "tah chin",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tachin.jpg/220px-Tachin.jpg",
       "id": 4
+    },
+    {
+      "title": "Eggplant stew",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Eggplant_stew_persian.jpg/220px-Eggplant_stew_persian.jpg",
+      "id": 5
+    },
+    {
+      "title": "Herb soup",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ash_Reshteh.JPG/250px-Ash_Reshteh.JPG",
+      "id": 6
     }
   ]
 }
