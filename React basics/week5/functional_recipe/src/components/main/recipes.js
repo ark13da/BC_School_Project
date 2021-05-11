@@ -3,7 +3,7 @@ import "./recipes.css";
 import RecipeCard from "./RecipeCard.js";
 import SingleRecipe from "./SingleRecipe.js";
 import axios from "axios";
-import { Switch, Route, useRouteMatch, useHistory } from "react-router-dom";
+import { Switch, Route, useRouteMatch } from "react-router-dom";
 import { ButtonGroup,Button, TextField } from "@material-ui/core";
 
 const Recipes =()=> {
@@ -12,7 +12,7 @@ const Recipes =()=> {
   const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchExists, setSearchExists] = useState("");
-  let history = useHistory();
+  //let history = useHistory();
 
   const changeHandler = (e) => {
     setSearchTerm(e.target.value);
@@ -29,30 +29,26 @@ const Recipes =()=> {
     document.getElementById("search").value = "";
   };
 
-  const matchSearch = () => {
-    if (searchExists.length) {
-      let searchMatch = recipeList.filter(
-        (i) => i.title.toLowerCase() === searchExists.toLowerCase()
-      );
-      setRecipeList(searchMatch);
-      document.getElementById("search").innerHTML = '';
-      //console.log(searchExists);
-      //console.log(searchMatch);
-      //console.log(recipeList);
-    }
-  };
-  
-  const myFunc = async () => {
-    let res = await axios.get("http://localhost:3001/recipes");
-    setRecipeList(res.data);
-    matchSearch();
-    //console.log(recipeList);
-    //console.log(recipeList);
-    };
 
   useEffect(() => {
     setIsLoading(true);
+
+    const myFunc = async () => {
+      ////https://mysterious-shore-28269.herokuapp.com/recipe/all
+      //let res = await axios.get("http://localhost:3001/recipes");
+      let res = await axios.get("http://localhost:5000");
+      if (searchExists.length) {
+        let searchMatch = res.data.recipes.filter(
+          (i) => i.title.toLowerCase() === searchExists.toLowerCase()
+        );
+        setRecipeList(searchMatch);
+        document.getElementById("search").innerHTML = "";
+      } else {
+        setRecipeList(res.data.recipes);
+      }
+    };
     myFunc();
+
     setIsLoading(false);
   }, [searchExists]);
 
@@ -60,28 +56,7 @@ const Recipes =()=> {
   if (isLoading) {
     return <div className="recipesContent">Loading...</div>;
   }
-  /*
-  if (!recipeList.length) {
-    return (
-      <div className="marginTop">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search recipe"
-          onChange={changeHandler}
-        />
-        <button type="button" onClick={searchHandler}>
-          Search
-        </button>
-        <button type="button" onClick={clearHandler}>
-          clear Search
-        </button>
-        <p>No match for search term</p>
-        <button onClick={() => history.goBack()}>Go back</button>
-      </div>
-    );
-  }
-*/
+
   return (
     <div className="marginTop">
       <TextField id="search" label="Search recipe" onChange={changeHandler} />

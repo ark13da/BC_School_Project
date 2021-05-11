@@ -29,6 +29,11 @@
       "title": "Herb soup",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Ash_Reshteh.JPG/250px-Ash_Reshteh.JPG",
       "id": 6
+    },
+    {
+      "title": "Fesenjan stew",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Khoresht-e_fesenjan.jpg/250px-Khoresht-e_fesenjan.jpg",
+      "id": 7
     }
   ]
 }

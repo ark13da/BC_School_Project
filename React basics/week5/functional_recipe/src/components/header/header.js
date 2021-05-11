@@ -25,7 +25,13 @@ const Header = () => {
     return (
       <div className="headBar">
         <h4 className="topLogo">
-         <NavLink to="/">Logo</NavLink>
+          <NavLink to="/">
+            <img
+              className="logo"
+              src="https://pics.freeicons.io/uploads/icons/png/14884211011604779601-512.png"
+              alt="logo"
+            />
+          </NavLink>
         </h4>
         <Nav />
       </div>

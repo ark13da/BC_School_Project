@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
+import Button from "@material-ui/core/Button";
 
 const SingleRecipe = () => {
     let { id } = useParams();
@@ -9,7 +10,9 @@ const SingleRecipe = () => {
 
     useEffect(() => {
       if (!newRecipe) {
-        axios.get("http://localhost:3001/recipes/" + id).then((res) => {
+        //axios.get("http://localhost:3001/recipes/" + id).then((res) => {
+        //  setNewRecipe(res.data);
+        axios.get("http://localhost:5000/recipes/" + id).then((res) => {
           setNewRecipe(res.data);
         });
       }
@@ -24,9 +27,9 @@ const SingleRecipe = () => {
             <div className="recipe">
               <img className="thumbnail" src={newRecipe.image} alt="foodPic" />
               <p className="foodTitle">{newRecipe.title}</p>
-              
             </div>
-            <button onClick={() => history.goBack()}>Go back</button>
+            <Button variant="outlined" onClick={() => history.goBack()}>Go back</Button>
+            
           </>
         );
     }

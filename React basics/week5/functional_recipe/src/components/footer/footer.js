@@ -15,8 +15,9 @@ const Footer = () => {
     };
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:3001/recipes", newRecipe)
-            .then(res=> window.location.href = "/recipes");
+        axios
+          .post("http://localhost:5000", newRecipe)
+          .then((res) => (window.location.href = "/recipes"));
     }
     return (
       <div className="footBar">
