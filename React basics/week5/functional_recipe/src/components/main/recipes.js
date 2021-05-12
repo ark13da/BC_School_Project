@@ -34,17 +34,17 @@ const Recipes =()=> {
     setIsLoading(true);
 
     const myFunc = async () => {
-      ////https://mysterious-shore-28269.herokuapp.com/recipe/all
-      //let res = await axios.get("http://localhost:3001/recipes");
-      let res = await axios.get("http://localhost:5000");
+      let res = await axios.get(
+        "https://mysterious-shore-28269.herokuapp.com/recipe/all"
+      );
       if (searchExists.length) {
-        let searchMatch = res.data.recipes.filter(
-          (i) => i.title.toLowerCase() === searchExists.toLowerCase()
+        let searchMatch = res.data.filter(
+          (i) => i.name.toLowerCase() === searchExists.toLowerCase()
         );
         setRecipeList(searchMatch);
         document.getElementById("search").innerHTML = "";
       } else {
-        setRecipeList(res.data.recipes);
+        setRecipeList(res.data);
       }
     };
     myFunc();
@@ -76,7 +76,7 @@ const Recipes =()=> {
                 key={item.id}
                 link={`${url}/${item.id}`}
                 image={item.image}
-                title={item.title}
+                name={item.name}
               />
             ))}
           </Route>
