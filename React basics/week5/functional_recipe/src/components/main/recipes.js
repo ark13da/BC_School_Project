@@ -4,7 +4,7 @@ import RecipeCard from "./RecipeCard.js";
 import SingleRecipe from "./SingleRecipe.js";
 import axios from "axios";
 import { Switch, Route, useRouteMatch } from "react-router-dom";
-import { ButtonGroup,Button, TextField } from "@material-ui/core";
+import { Button, InputGroup, FormControl } from "react-bootstrap";
 
 const Recipes =()=> {
   let { path, url } = useRouteMatch();
@@ -59,15 +59,24 @@ const Recipes =()=> {
 
   return (
     <div className="marginTop">
-      <TextField id="search" label="Search recipe" onChange={changeHandler} />
-      <ButtonGroup
-        variant="text"
-        size="small"
-        aria-label="small text button group"
-      >
-        <Button onClick={searchHandler}>Search</Button>
-        <Button onClick={clearHandler}>Clear</Button>
-      </ButtonGroup>
+      <InputGroup  className="mb-3 w-50">
+        <FormControl
+          placeholder="Search recipe"
+          aria-label="Search recipe"
+          aria-describedby="basic-addon2"
+          onChange={changeHandler}
+          id="search"
+        />
+        <InputGroup.Append>
+          <Button variant="warning" onClick={searchHandler}>
+            Search
+          </Button>
+          <Button variant="danger" onClick={clearHandler}>
+            Clear
+          </Button>
+        </InputGroup.Append>
+      </InputGroup>
+
       <div className="recipesContent">
         <Switch>
           <Route path="/recipes" exact>

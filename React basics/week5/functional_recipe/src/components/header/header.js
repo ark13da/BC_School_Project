@@ -13,6 +13,9 @@ const Nav = () => {
             <NavLink to="/recipes">Recipes</NavLink>
           </li>
           <li>
+            <NavLink to="/newRecipe">Add</NavLink>
+          </li>
+          <li>
             <NavLink to="/about">About</NavLink>
           </li>
         </ul>
@@ -22,20 +25,20 @@ const Nav = () => {
 
 
 const Header = () => {
-    return (
-      <div className="headBar">
-        <h4 className="topLogo">
-          <NavLink to="/">
-            <img
-              className="logo"
-              src="https://pics.freeicons.io/uploads/icons/png/14884211011604779601-512.png"
-              alt="logo"
-            />
-          </NavLink>
-        </h4>
-        <Nav />
-      </div>
-    );
+  return (
+    <div className="headBar">
+      <h4 className="topLogo">
+        <NavLink to="/">
+          <img
+            className="logo"
+            src="https://freepngimg.com/thumb/cooking/29443-1-cooking-file-thumb.png"
+            alt="logo"
+          />
+        </NavLink>
+      </h4>
+      <Nav />
+    </div>
+  );
 };
 
 export default Header;

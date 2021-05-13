@@ -8,9 +8,9 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem;
-    background-color:rgb(247, 131, 54);
     width:100%;
     position: fixed;
+    
 }
 
 .topLogo a{
@@ -29,16 +29,19 @@
     font-weight: 500;
     
     
+    
 }
 
 .topNav li a{
    text-decoration: none; 
-   color:white;
+   color:rgb(218, 13, 13);
+   border-bottom: 3px solid red;
+   padding:3px;
 }
 
 .topNav li a:hover{
    
-   color:brown;
+   color:orange;
 }
 
 .logo{

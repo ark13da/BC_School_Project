@@ -1,25 +1,54 @@
 import React, { useState} from 'react';
 import { Button, TextField } from "@material-ui/core";
 import "./recipes.css";
+import axios from "axios";
 
-const Newrecipe = ({ change, click, list }) => {
+
+const Newrecipe = () => {
   let [ingList, setIngList] = useState([]);
+  
+  const addListing = () => {
+    setIngList((prevState) => [...prevState, newTextField]);
+  }
+const [newRecipe, setNewRecipe] = useState({
+  name: "",
+  image: "",
+  ingredients: [],
+  instructions: "",
+});
+
+const changeHandler = (e) => {
+  setNewRecipe({ ...newRecipe, [e.target.name]: e.target.value });
+};
+const lsitHandler = (e) => {
+  setNewRecipe({
+    ...newRecipe,
+    ingredients: [...newRecipe.ingredients, e.target.value],
+  });
+};
+const submitHandler = (e) => {
+  e.preventDefault();
+  axios
+    .post(
+      "https://mysterious-shore-28269.herokuapp.com/recipe/add",
+      JSON.stringify(newRecipe)
+    )
+    .then((res) => (window.location.href = "/recipes"));
+  };
   const newTextField = (
     <TextField
       type="text"
       id="ingredients"
       name="ingredients"
       label="ingredient"
-      onChange={list}
+      onChange={lsitHandler}
     />
   );
-  const addListing = () => {
-    setIngList((prevState) => [...prevState, newTextField]);
-  }
+
     return (
-      <div className="RecipeNew">
+      <div className="marginTop">
         <h3>Add new recipe</h3>
-        <form onSubmit={click}>
+        <form onSubmit={submitHandler}>
           <div>
             <TextField
               type="text"
@@ -27,7 +56,7 @@ const Newrecipe = ({ change, click, list }) => {
               name="name"
               label="name"
               required
-              onChange={change}
+              onChange={changeHandler}
             />
           </div>
           <div>
@@ -37,7 +66,7 @@ const Newrecipe = ({ change, click, list }) => {
               name="image"
               required
               label="Image"
-              onChange={change}
+              onChange={changeHandler}
             />
           </div>
           {ingList.map((i) => (
@@ -55,10 +84,10 @@ const Newrecipe = ({ change, click, list }) => {
               name="instructions"
               required
               label="Instructions"
-              onChange={change}
+              onChange={changeHandler}
             />
           </div>
-          
+
           <Button type="submit">Submit</Button>
         </form>
       </div>

@@ -1,10 +1,15 @@
 
 .footBar{
-    position:static;
     bottom: 0;
     left:0;
     padding: 1rem;
-    background-color: rgb(247, 131, 54);;
     width:100%;  
+    text-align: center;
 }
 
+.borderShort{
+  border-top: 3px solid rgb(247, 131, 54);
+  content: '';
+  width: 70%;
+  margin: 2rem auto 2rem auto;
+}
