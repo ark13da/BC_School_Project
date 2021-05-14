@@ -47,55 +47,64 @@ const Recipes =()=> {
         setRecipeList(res.data);
       }
     };
-    myFunc();
+    setTimeout(
+      () => {
+        myFunc();
+        setIsLoading(false);  
+      }, 1000);
 
-    setIsLoading(false);
+    
   }, [searchExists]);
 
 
   if (isLoading) {
-    return <div className="recipesContent">Loading...</div>;
+    return (
+      <div className="marginTop">
+        <p>Loading...</p>
+      </div>
+    );
+  } else {
+    return (
+      <div className="marginTop">
+        <InputGroup className="mb-3 w-50">
+          <FormControl
+            placeholder="Search recipe"
+            aria-label="Search recipe"
+            aria-describedby="basic-addon2"
+            onChange={changeHandler}
+            id="search"
+          />
+          <InputGroup.Append>
+            <Button variant="warning" onClick={searchHandler}>
+              Search
+            </Button>
+            <Button variant="danger" onClick={clearHandler}>
+              Clear
+            </Button>
+          </InputGroup.Append>
+        </InputGroup>
+
+        <div className="recipesContent">
+          <Switch>
+            <Route path="/recipes" exact>
+              {recipeList.map((item) => (
+                <RecipeCard
+                  key={item.id}
+                  link={`${url}/${item.id}`}
+                  image={item.image}
+                  name={item.name}
+                />
+              ))}
+            </Route>
+            <Route path={`${path}/:id`}>
+              <SingleRecipe />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    );
   }
 
-  return (
-    <div className="marginTop">
-      <InputGroup  className="mb-3 w-50">
-        <FormControl
-          placeholder="Search recipe"
-          aria-label="Search recipe"
-          aria-describedby="basic-addon2"
-          onChange={changeHandler}
-          id="search"
-        />
-        <InputGroup.Append>
-          <Button variant="warning" onClick={searchHandler}>
-            Search
-          </Button>
-          <Button variant="danger" onClick={clearHandler}>
-            Clear
-          </Button>
-        </InputGroup.Append>
-      </InputGroup>
-
-      <div className="recipesContent">
-        <Switch>
-          <Route path="/recipes" exact>
-            {recipeList.map((item) => (
-              <RecipeCard
-                key={item.id}
-                link={`${url}/${item.id}`}
-                image={item.image}
-                name={item.name}
-              />
-            ))}
-          </Route>
-          <Route path={`${path}/:id`}>
-            <SingleRecipe />
-          </Route>
-        </Switch>
-      </div>
-    </div>
-  );
 }
 
 export default Recipes;

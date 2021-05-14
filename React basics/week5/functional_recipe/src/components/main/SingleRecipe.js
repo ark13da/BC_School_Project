@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import axios from "axios";
-import Button from "@material-ui/core/Button";
+import { Button} from "react-bootstrap";
 
 const SingleRecipe = () => {
     let { id } = useParams();
@@ -36,9 +36,10 @@ const SingleRecipe = () => {
               <h4>Instructions:</h4>
               <p>{newRecipe.instructions}</p>
             </div>
-            <Button variant="outlined" onClick={() => history.goBack()}>
+            <Button variant="warning" onClick={() => history.goBack()}>
               Go back
             </Button>
+            
           </>
         );
     }

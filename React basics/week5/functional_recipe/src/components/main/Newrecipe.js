@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
-import { Button, TextField } from "@material-ui/core";
 import "./recipes.css";
+import { Button,Form} from "react-bootstrap";
 import axios from "axios";
 
 
@@ -36,11 +36,11 @@ const submitHandler = (e) => {
     .then((res) => (window.location.href = "/recipes"));
   };
   const newTextField = (
-    <TextField
+    <Form.Control
       type="text"
       id="ingredients"
       name="ingredients"
-      label="ingredient"
+      placeholder="ingredient"
       onChange={lsitHandler}
     />
   );
@@ -48,48 +48,61 @@ const submitHandler = (e) => {
     return (
       <div className="marginTop">
         <h3>Add new recipe</h3>
-        <form onSubmit={submitHandler}>
-          <div>
-            <TextField
+        <Form className="w-75" onSubmit={submitHandler}>
+          <Form.Group>
+            <Form.Label>Name</Form.Label>
+            <Form.Control
               type="text"
               id="name"
               name="name"
-              label="name"
+              placeholder="Name"
               required
               onChange={changeHandler}
             />
-          </div>
-          <div>
-            <TextField
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Image</Form.Label>
+            <Form.Control
               type="text"
               id="image"
               name="image"
+              placeholder="Image"
               required
-              label="Image"
               onChange={changeHandler}
             />
-          </div>
-          {ingList.map((i) => (
-            <div key={ingList.indexOf(i)}>{i}</div>
-          ))}
-          <div>
-            <Button type="button" onClick={addListing}>
-              + Add ingredients
-            </Button>
-          </div>
-          <div>
-            <TextField
-              type="text"
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Ingredients</Form.Label>
+            {ingList.map((i) => (
+              <div key={ingList.indexOf(i)}>{i}</div>
+            ))}
+            <div>
+              <Button
+                type="button"
+                variant="outline-danger"
+                onClick={addListing}
+              >
+                + Add ingredient
+              </Button>
+            </div>
+          </Form.Group>
+          <Form.Group>
+            <Form.Label>Instructions</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
               id="instructions"
               name="instructions"
+              plceholder="instructions"
               required
-              label="Instructions"
               onChange={changeHandler}
             />
-          </div>
+          </Form.Group>
 
-          <Button type="submit">Submit</Button>
-        </form>
+          <Button type="submit" variant="warning" block>
+            Submit
+          </Button>
+        </Form>
       </div>
     );
     
