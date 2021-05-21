@@ -33,7 +33,7 @@ const submitHandler = (e) => {
       "https://mysterious-shore-28269.herokuapp.com/recipe/add",
       JSON.stringify(newRecipe)
     )
-    .then((res) => (window.location.href = "/recipes"));
+    .then((res) => (window.location.href = "/"));
   };
   const newTextField = (
     <Form.Control

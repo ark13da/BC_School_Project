@@ -24,22 +24,29 @@ const SingleRecipe = () => {
     } else {
         recipeData = (
           <>
-            <div className="recipe">
-              <img className="thumbnail" src={newRecipe.image} alt="foodPic" />
-              <p className="foodTitle">{newRecipe.name}</p>
-              <h4>Ingredients:</h4>
-              <ul>
-                {newRecipe.ingredients.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-              <h4>Instructions:</h4>
-              <p>{newRecipe.instructions}</p>
+            <div className="recipesContent">
+              <div className="recipeSinglePart">
+                <img
+                  className="thumbnail"
+                  src={newRecipe.image}
+                  alt="foodPic"
+                />
+              </div>
+              <div className="recipeSinglePart">
+                <h2 className="foodTitle">{newRecipe.name}</h2>
+                <h4>Ingredients:</h4>
+                <ul>
+                  {newRecipe.ingredients.map((i) => (
+                    <li key={i}>{i}</li>
+                  ))}
+                </ul>
+                <h4>Instructions:</h4>
+                <p>{newRecipe.instructions}</p>
+              </div>
             </div>
             <Button variant="warning" onClick={() => history.goBack()}>
               Go back
             </Button>
-            
           </>
         );
     }
