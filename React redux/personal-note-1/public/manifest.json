@@ -1,0 +1,8 @@
+{
+  "short_name": "React App",
+  "name": "Personal note 1 with react and redux",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

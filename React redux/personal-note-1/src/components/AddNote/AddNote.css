@@ -1,0 +1,26 @@
+.addNote{
+    font-weight: 400;
+    margin:10px;
+}
+    input{
+        padding:8px;
+        line-height: 8px;
+        border-radius: 5px;
+        color: gray;
+        margin-left:10px;
+        width:300px;
+        
+    }
+    button{
+        margin-left:10px;
+        color:ivory;
+       padding:8px;
+       border: 2px solid white;
+        border-radius: 5px;
+        background-color: rgb(3, 83, 3); 
+        
+    }
+
+    button:hover{
+            background-color: rgb(2, 59, 2); 
+        }
