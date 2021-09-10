@@ -1,0 +1,28 @@
+main {
+  padding: 2rem;
+}
+
+form input {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+form button {
+  background-color: darkorange;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  margin: 0 1rem;
+}
+
+.todo {
+  color: green;
+}
+.todo.strike {
+  color: grey;
+  text-decoration: line-through;
+}
+
+button {
+  font-size: inherit;
+}
